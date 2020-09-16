@@ -1,4 +1,10 @@
-#!/bin/bash
+#!/bin/sh -l
+
+# this was absorbed by the github action
+
+echo "Hello $1"
+time=$(date)
+echo "::set-output name=time::$time"
 
 set -ex
 
