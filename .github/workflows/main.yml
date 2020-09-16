@@ -1,17 +1,12 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  stm32_ci_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job to run CI for stm32
     steps:
     - uses: actions/checkout@v2
-    - name: Hello world action step
-      id: hello
-      uses: milesfrain/stm32-action@v0.3
-      with:
-        who-to-greet: 'Mona the Octocat'
-    # Use the output from the `hello` step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+    - name: My CI action step
+      id: stm32ci
+      uses: milesfrain/stm32-action@v0.4
 
