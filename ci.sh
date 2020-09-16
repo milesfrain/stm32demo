@@ -3,8 +3,16 @@
 # Was hoping that this would be enough to reliably exit on failure
 #set -ex
 
+# just echo commands
+set -x
+
 ./format/check.sh
 format_ret=$?
+
+echo listing directory
+ls
+
+echo running build
 
 /opt/st/stm32cubeide_1.4.0/stm32cubeide --launcher.suppressErrors -nosplash -application org.eclipse.cdt.managedbuilder.core.headlessbuild -build all -data . 2>&1
 
