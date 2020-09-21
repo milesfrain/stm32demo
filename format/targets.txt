@@ -1,1 +1,1 @@
-ci_test/custom
+example/custom
