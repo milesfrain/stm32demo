@@ -8,5 +8,5 @@ TEST(TestMySum, Test_MySumBasic)
 {
   LONGS_EQUAL(7, my_sum(3, 4));
   LONGS_EQUAL(0, my_sum(-1, 1));
-  LONGS_EQUAL(-3, my_sum(5, -8));
+  LONGS_EQUAL(-3, my_sum(9, -8));
 }
